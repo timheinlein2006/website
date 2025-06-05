@@ -1,25 +1,79 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internet Speedtest</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Speedtest – heinlein-it.com</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 20px;
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: #f0f4f8;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-        #result {
-            margin-top: 20px;
+
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        button {
+            background-color: #007bff;
+            border: none;
+            padding: 12px 25px;
+            color: white;
             font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 30px;
+            font-size: 20px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            min-width: 250px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #eaeaea;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <h1>Internet Speedtest</h1>
-    <button onclick="runSpeedtest()">Speedtest starten</button>
-    <div id="result"></div>
+    <header>speedtest.heinlein-it.com</header>
+    <main>
+        <h2>Starte deinen Internet-Speedtest</h2>
+        <button onclick="runSpeedtest()">Speedtest starten</button>
+        <div id="result"></div>
+    </main>
+    <footer>Created by Heinlein – GitHub Pages</footer>
+
     <script src="script.js"></script>
 </body>
 </html>
